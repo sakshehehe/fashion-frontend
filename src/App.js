@@ -4,6 +4,7 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Products from './Pages/Products';
 import Wishlist from './Pages/Wishlist';
+import HomePage from './Pages/HomePage';
 import { AuthProvider, useAuth } from './AuthContext';
 
 const PrivateRoute = ({ children }) => {
@@ -16,6 +17,7 @@ export default function App() {
     <AuthProvider>
       <Router>
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/products" element={<PrivateRoute><Products /></PrivateRoute>} />
