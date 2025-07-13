@@ -1,22 +1,27 @@
 // src/HomePage.jsx
+// src/HomePage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css'; // You'll create this CSS file next
+import './HomePage.css';
 
 function HomePage() {
   return (
     <div className="homepage">
       <nav className="navbar">
-        <h1 className="navbar-title">Fashion Inventory</h1>
+        <div className="logo">🛍️ FashionHub</div>
+        <div className="nav-links">
+          <Link to="/register" className="nav-btn">Register</Link>
+          <Link to="/login" className="nav-btn">Login</Link>
+        </div>
       </nav>
 
-      <div className="hero-section">
+      <div className="hero">
         <div className="hero-content">
-          <h2>Welcome to Fashion Inventory</h2>
-          <p>Manage your fashion products with ease.</p>
+          <h1>Welcome to FashionHub</h1>
+          <p>Your one-stop solution for managing fashion inventory</p>
           <div className="hero-buttons">
-            <Link to="/register" className="btn">Register</Link>
-            <Link to="/login" className="btn secondary">Already have an account? Login</Link>
+            <Link to="/register" className="btn primary-btn">Get Started</Link>
+            <Link to="/login" className="btn secondary-btn">Already a member? Login</Link>
           </div>
         </div>
       </div>
