@@ -1,162 +1,3 @@
-/* ======== FORM STYLES FOR LOGIN / REGISTER ======== */
-.form-container {
-  max-width: 400px;
-  margin: 3rem auto;
-  padding: 2rem 2.5rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.form-title {
-  font-size: 1.8rem;
-  color: #ff3f6c;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-.form-container label {
-  display: block;
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 6px;
-  margin-top: 1rem;
-}
-
-.form-container input[type="text"],
-.form-container input[type="password"],
-.form-container input[type="email"],
-.form-container input[type="number"] {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-  outline: none;
-  transition: border 0.3s;
-}
-
-.form-container input:focus {
-  border: 1px solid #ff3f6c;
-}
-
-/* Submit Button */
-.submit-btn {
-  width: 100%;
-  background-color: #ff3f6c;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 25px;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.submit-btn:hover {
-  background-color: #e5365c;
-}
-
-.submit-btn:active {
-  background-color: #c62848;
-  transform: scale(0.97);
-}
-
-/* Register/Login link */
-.form-container p {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.form-container a {
-  color: #ff3f6c;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.form-container a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .form-container {
-    padding: 1.5rem;
-  }
-
-  .form-title {
-    font-size: 1.5rem;
-  }
-}
-
-.products-container {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.products-container h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  transition: transform 0.2s;
-  text-align: center;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.product-card h3 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  color: #333;
-}
-
-.product-card p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.product-price {
-  font-weight: bold;
-  color: #e91e63;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-}
-
 /* General Reset */
 * {
   margin: 0;
@@ -166,8 +7,8 @@
 }
 
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* NAVBAR */
@@ -177,17 +18,18 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 3rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #e5e5e5;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #ff3f6c;
+  color: #db0020;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -198,16 +40,16 @@ body {
 .nav-btn {
   text-decoration: none;
   font-size: 1rem;
-  color: #ff3f6c;
-  border: 2px solid #ff3f6c;
+  color: #db0020;
+  border: 2px solid #db0020;
   padding: 8px 16px;
-  border-radius: 20px;
-  transition: 0.3s ease;
+  border-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-btn:hover {
-  background-color: #ff3f6c;
-  color: white;
+  background-color: #db0020;
+  color: #ffffff;
 }
 
 /* HERO SECTION */
@@ -220,23 +62,24 @@ body {
 }
 
 .hero-content {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   padding: 2rem 3rem;
-  border-radius: 16px;
+  border-radius: 4px;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   max-width: 600px;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
-  color: #333;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
   font-size: 1.1rem;
-  color: #555;
+  color: #333;
   margin-bottom: 2rem;
 }
 
@@ -250,43 +93,192 @@ body {
 .btn {
   text-decoration: none;
   padding: 12px 24px;
-  border-radius: 30px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
 
-/* Primary Button - Magenta */
+/* Primary Button - Red */
 .primary-btn {
-  background-color: #ff3f6c;
+  background-color: #db0020;
   color: white;
 }
 
 .primary-btn:hover {
-  background-color: #e5365c;
+  background-color: #a8001a;
 }
 
 .primary-btn:active {
-  background-color: #c62848;
+  background-color: #800014;
   transform: scale(0.97);
 }
 
-/* Secondary Button - Outline Style */
+/* Secondary Button - Border Only */
 .secondary-btn {
-  border: 2px solid #ff3f6c;
-  color: #ff3f6c;
   background-color: transparent;
+  color: #db0020;
+  border: 2px solid #db0020;
 }
 
 .secondary-btn:hover {
-  background-color: #ff3f6c;
+  background-color: #db0020;
   color: white;
 }
 
 .secondary-btn:active {
-  background-color: #c62848;
-  border-color: #c62848;
+  background-color: #800014;
+  border-color: #800014;
+}
+
+/* FORMS - LOGIN/REGISTER */
+.form-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-title {
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-container label {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 6px;
+  margin-top: 1rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+.form-container input:focus {
+  border-color: #db0020;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: #db0020;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #a8001a;
+}
+
+.submit-btn:active {
+  background-color: #800014;
   transform: scale(0.97);
+}
+
+.form-container p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.form-container a {
+  color: #db0020;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* PRODUCT SECTION */
+.products-container {
+  padding: 2rem;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.products-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #db0020;
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
 /* Responsive */
