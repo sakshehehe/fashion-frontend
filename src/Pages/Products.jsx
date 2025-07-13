@@ -31,7 +31,9 @@ export default function Products() {
       <div className="product-grid">
         {products.map(p => (
           <div className="product-card" key={p._id}>
+            <img src={p.image} alt={p.name} className="product-image" />
             <h3>{p.name}</h3>
+            
             <p>{p.description}</p>
             <p className="product-price">₹{p.price}</p>
           </div>
