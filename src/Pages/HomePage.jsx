@@ -2,13 +2,13 @@
 // src/HomePage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css';
+import '../App.css';
 
 function HomePage() {
   return (
     <div className="homepage">
       <nav className="navbar">
-        <div className="logo">🛍️ FashionHub</div>
+        <div className="logo">FashionHub</div>
         <div className="nav-links">
           <Link to="/register" className="nav-btn">Register</Link>
           <Link to="/login" className="nav-btn">Login</Link>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../AuthContext';
 
+
 export default function Products() {
   const [products, setProducts] = useState([]);
   const { token } = useAuth();
@@ -36,9 +37,10 @@ export default function Products() {
             
             <p>{p.description}</p>
             <p className="product-price">₹{p.price}</p>
+            
           </div>
         ))}
       </div>
     </div>
-  );
+  )
 }
