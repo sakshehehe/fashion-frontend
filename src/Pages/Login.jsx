@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import axios from "axios";
 import "../App.css";
@@ -13,8 +13,8 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const baseurl = "https://fashion-1m73.onrender.com/api/auth";
     try {
-      let baseurl="https://fashion-1m73.onrender.com"
       const res = await axios.post(`${baseurl}/login`, {
         email,
         password
@@ -55,6 +55,8 @@ function Login() {
       />
 
       <input type="submit" value="Login" className="submit-btn" />
+
+      <p>Don't have an account? <Link to="/register">Register</Link></p>
     </form>
   );
 }

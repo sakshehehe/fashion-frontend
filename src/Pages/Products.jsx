@@ -5,17 +5,23 @@ import { useAuth } from '../AuthContext';
 export default function Products() {
   const [products, setProducts] = useState([]);
   const { token } = useAuth();
+  const baseurl = "https://fashion-1m73.onrender.com";
 
   useEffect(() => {
-    let baseurl="https://fashion-1m73.onrender.com"
-    axios.get(`${baseurl}/products`, {
-      headers: { Authorization: token }
+    if (!token) {
+      console.log("No token found. Not fetching products.");
+      return;
+    }
+    console.log("Token sent to backend:", token);
+
+    axios.get(`${baseurl}/api/products`, {
+      headers: { Authorization: `Bearer ${token}` }
     })
     .then((response) => {
       setProducts(response.data);
     })
     .catch((error) => {
-      console.error('Error fetching products:', error);
+      console.error('Error fetching products:', error.response?.data || error.message);
     });
   }, [token]);
 
